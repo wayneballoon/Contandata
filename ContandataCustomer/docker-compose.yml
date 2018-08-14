@@ -1,0 +1,15 @@
+version: '3.4'
+
+services:
+  consignee:
+    image: customer-consignee
+    build:
+      context: .
+      dockerfile: Consignee/Dockerfile
+
+  soldto:
+    image: customer-soldto
+    build:
+      context: .
+      dockerfile: SoldTo/Dockerfile
+
