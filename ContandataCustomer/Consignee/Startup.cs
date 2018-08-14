@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
+using Nancy.Owin;
 
 namespace Consignee
 {
@@ -27,6 +28,7 @@ namespace Consignee
 
             app.Run(async (context) =>
             {
+                app.UseOwin(buildFunc => buildFunc.UseNancy());
                 await context.Response.WriteAsync("Hello Consignee!");
             });
         }
