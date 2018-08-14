@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace SoldTo
+namespace Orders
 {
     public class Startup
     {
@@ -27,7 +27,7 @@ namespace SoldTo
 
             app.Run(async (context) =>
             {
-                await context.Response.WriteAsync("Hello SoldTo!");
+                await context.Response.WriteAsync("Hello Orders!");
             });
         }
     }

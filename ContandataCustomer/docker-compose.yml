@@ -13,3 +13,17 @@ services:
       context: .
       dockerfile: SoldTo/Dockerfile
 
+
+  carrier:
+    image: customer-carrier
+    build:
+      context: .
+      dockerfile: Carrier/Dockerfile
+
+
+  orders:
+    image: customer-orders
+    build:
+      context: .
+      dockerfile: Orders/Dockerfile
+

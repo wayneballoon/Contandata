@@ -13,3 +13,19 @@ services:
       - ASPNETCORE_URLS=http://+:80
     ports:
       - "5003:80"
+
+  carrier:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:80
+    ports:
+      - "5005:80"
+    
+
+  orders:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:80
+    ports:
+      - "5006:80"
+
